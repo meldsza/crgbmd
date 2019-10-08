@@ -1,0 +1,152 @@
+.parallax
+{
+    background: url(images/about.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    width: 100%;
+    min-height : 400px;
+}
+.parallaximg
+{
+    background-image: url(images/dna.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    width: 100%;
+    min-height : 900px;
+}
+
+.parallax1
+{
+    background: url(images/team.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    width: 100%;
+    min-height : 400px;
+    opacity: 0.6;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  
+  .caption span.border {
+    background-color: #111;
+    color: rgb(0, 0, 0);
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+
+section
+{
+    padding: 2em;
+}
+
+.tab-pane
+{
+    padding: 2em;
+}
+
+#goals
+{
+    list-style:none;
+}
+
+.card
+{
+    margin-bottom: 1em;
+}
+html{
+    scroll-behavior: smooth;
+}
+.zoom {
+    
+    transition: transform .2s; /* Animation */
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .zoom:hover {
+    transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .parallax2
+{
+    background: url(images/services.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    width: 100%;
+    min-height : 400px;
+    opacity: 0.8;
+}
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding-top:0.5em;
+    padding-left:0.9em;
+    font-size: 1.2rem;
+    color: #fafafa;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+}
+
+.list-group-item:hover
+{
+    background-color: navy;
+}
+  
+  hr
+  {
+      background-color: white;
+      width:85%;
+      opacity:0.5;
+  }
