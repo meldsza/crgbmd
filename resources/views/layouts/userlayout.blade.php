@@ -32,31 +32,35 @@
                 <div class="col-md">
                     <p class="text-white"><i class="fa fa-phone" area-hidden="true"></i> +91 9876543210</p>
                 </div>
-
-                <div class="col-sm">
+                <div style="margin:10px"></div>
+            </div>
+            <div class="row">
+                <div class="col-md">
                     <p class="text-white"><i class="fa fa-envelope" area-hidden="true"></i> help@abc.com</p>
                 </div>
-                <div class="col-sm">
+                <div class="col-md">
                     <p class="text-white"><i class="fa fa-envelope" area-hidden="true"></i> help@abc.com</p>
                 </div>
-
-                <div class="col-sm ">
+            </div>
+            <div class="row offset-4">
+                 <div class="col">
                     <i class="fa fa-twitter pad text-white" area-hidden="true"></i>
                 </div>
-                <div class="col-sm">
+                <div class="col">
                     <i class="fa fa-facebook pad text-white" area-hidden="true"></i>
                 </div>
-                <div class="col-sm">
+                <div class="col">
                     <i class="fa fa-instagram pad text-white" area-hidden="true"></i>
                 </div>
-                <div class="col-sm">
+                <div class="col">
                     <i class="fa fa-linkedin pad text-white" area-hidden="true"></i>
                 </div>
             </div>
-
         </div>
-
     </nav>
+
+
+
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand " href="userhome">
             <img src="images/logo.png" width="210" height="90" alt="">

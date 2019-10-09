@@ -1,6 +1,6 @@
 @extends('layouts.adminlayout')
 @section('title')
-CRGBMD | IN
+CRGBMD INDIA | Dashboard
 @endsection
 
 @section('content2')
@@ -22,11 +22,11 @@ CRGBMD | IN
         </div>
         <div class="col-md">
             <div class="card border-secondary mb-3" style="max-width: 18rem;">
-                <a href="{{url('')}}"><div class="card-body text-secondary">
+                <a href="{{url('/team')}}" class="link"><div class="card-body text-secondary">
                     <h5 class="card-title text-center count">Team</h5>
                     <h1 class="card-text">
                         <div class="text-center count">
-                            {{$team}}
+                            {{$teamno}}
                         </div>
                       </h1>
                 </div></a>
@@ -34,11 +34,14 @@ CRGBMD | IN
         </div>
         <div class="col-md">
             <div class="card border-danger mb-3" style="max-width: 18rem;">
-                <div class="card-body text-danger">
-                    <h5 class="card-title">Primary card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the
-                        bulk of the card's content.</p>
-                </div>
+                    <a href="{{url('/manageevents')}}" class="link"><div class="card-body text-danger">
+                    <h5 class="card-title">Events Conducted</h5>
+                    <h1 class="card-text">
+                            <div class="text-center count">
+                                {{$eventno}}
+                            </div>
+                    </h1>
+                </div></a>
             </div>
         </div>
     </div><br>
