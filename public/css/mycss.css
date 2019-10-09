@@ -1,6 +1,6 @@
 .parallax
 {
-    background: url(images/about.jpg);
+    background: url(/images/about.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,19 +11,19 @@
 }
 .parallaximg
 {
-    background-image: url(images/dna.jpg);
+    background-image: url(/images/about.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position:relative;
     width: 100%;
-    min-height : 900px;
+    min-height : 400px;
 }
 
 .parallax1
 {
-    background: url(images/team.jpg);
+    background: url(/images/team.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,4 +149,22 @@ html{
       background-color: white;
       width:85%;
       opacity:0.5;
+  }
+
+  
+  .register_btn
+  {
+    margin: 2em;
+  }
+
+  .count
+  {
+    color: black !important;
+    font-family: sans-serif;
+  }
+
+  .link:hover
+  {
+    text-decoration: none;
+    opacity: 0.2;
   }

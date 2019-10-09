@@ -1,13 +1,10 @@
 @extends('layouts.userlayout')
 @section('hometitle')
-  CRGBMD-HOME
+  CRGBMD INDIA | Home
 @endsection
 @section('usercontent')    
-    <div>
-        <img src="{{asset('images/about.jpg')}}" style="background-repeat:no-repeat;background-attachment: fixed;
-        background-position: center; width: 100%;height : 400px; position:relative;">
-    </div><br>
-    <h1 class="text-center font-weight-bold"style="color:#4e73df">WELCOME TO CRGBMD|IN</h1>
+    <div class="parallaximg"></div>
+    {{-- <h1 class="text-center font-weight-bold"style="color:#4e73df">WELCOME TO CRGBMD|IN</h1> --}}
     <section id="home">
        
         <div class="container">
@@ -16,7 +13,7 @@
                     <div class="card text-white  mb-3 " style="max-width: 35rem;background-color:rgb(65, 153, 253);">
                         <div class="card-header text-center font-weight-bold">MISSION</div>
                         <div class="card-body">
-                            <h5 class="card-title animated flipInX" style="animation-delay: 1s">Mission Statement</h5>
+                            <h5 class="card-title animated flipInX" style="animation-delay: 5s">Mission Statement</h5>
 
                         </div>
                     </div>

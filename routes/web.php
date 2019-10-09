@@ -1,6 +1,9 @@
 <?php
+
 use App\news;
 use App\events;
+use App\members;
+use App\team;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,20 +15,42 @@ use App\events;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
 Route::get('/dashboard',function(){
-    return view('admindashboard');
-});
+    $cnt = members::count();
+    $cnt2 = team::count();
+    $cnt3 = events::count();
+    return view('admindashboard')->with(['total'=>$cnt,'teamno'=>$cnt2,'eventno'=>$cnt3]);
+})->middleware('auth');
 Route::get('/addevents',function(){
     return view('addevents');
 });
 Route::get('/adminnews',function(){
     return view('addnews1');
 });
+Route::get('/member_registration',function(){
+    return view('registermember');
+});
+Route::get('/addteam',function(){
+    return view('addteam');
+});
+Route::get('/team','admincontroller@displayteam');
+Route::get('/members','admincontroller@displaymembers');
+Route::get('/managenews','admincontroller@displaynews');
+Route::get('/manageevents','admincontroller@displayevents');
 Route::post('/addnewss','admincontroller@news');
 Route::post('/addeventss','admincontroller@events');
+Route::post('/addmember','admincontroller@member');
+Route::post('/addteams','admincontroller@team');
+Route::get('delete/{id}','admincontroller@delete');
+Route::get('deletenews/{id}','admincontroller@deletenews');
+Route::get('deleteevents/{id}','admincontroller@deleteevents');
+
+
 
 Route::get('/userhome',function(){
     return view('uhome');

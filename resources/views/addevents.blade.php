@@ -1,6 +1,6 @@
 @extends('layouts.adminlayout')
 @section('title')
-    CRGBMD:ADMIN-ADD EVENTS
+    CRGBMD INDIA | Add events
 @endsection
 @section('content2')
 <div class="container">
@@ -63,8 +63,9 @@
                 
            
 
-
-            <button type="submit" class="btn btn-outline-success">Add Event</button>
+            <div class="text-right">
+                <button type="submit" class="btn btn-outline-success">Add Event</button>
+            </div>
         </form>
     </div>
 </div>

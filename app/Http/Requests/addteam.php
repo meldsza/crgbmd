@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class addnews extends FormRequest
+class addteam extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,6 +23,14 @@ class addnews extends FormRequest
      */
     public function rules()
     {
-        return ['newshead'=>'string|required','newsdate'=>'date|required','description'=>'string|required'];
+        return [
+           'name'=>'string|required',
+           'affiliation'=>'string|required',
+           'email'=>'string|required',
+           'designation'=>'string|required',
+           'position'=>'string|required',
+           'committe'=>'string|required',
+           'photo'=>'nullable|max:10000'
+        ];
     }
 }
