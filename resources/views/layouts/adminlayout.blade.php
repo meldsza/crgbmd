@@ -25,13 +25,13 @@
             </div>
             <hr>
             <div class="list-group list-group-flush" style="background-color: #4e73df;">
-                <a href="dashboard.html" class="list-group-item list-group-item-action text-white"><i
+                <a href="#" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-tachometer text-white" aria-hidden="true"></i><strong>Dashboard</strong></a>
                 <a href="#" class="list-group-item list-group-item-action text-white"><i class="fa fa-user text-white"
                         aria-hidden="true"></i>Manage Users</a>
-                <a href="events.html" class="list-group-item list-group-item-action text-white"><i
+                <a href="addevents" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-calendar text-white" aria-hidden="true"></i> Add Events</a>
-                <a href="news.html" class="list-group-item list-group-item-action text-white"><i
+                <a href="adminnews" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-newspaper-o text-white" aria-hidden="true"></i>Add News</a>
                 <a class="list-group-item list-group-item-action dropdown-toggle text-white" href="#" role="button"
                     id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

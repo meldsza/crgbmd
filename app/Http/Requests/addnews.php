@@ -23,6 +23,6 @@ class addnews extends FormRequest
      */
     public function rules()
     {
-        return ['newstitle'=>'string|required','newsdate'=>'date|required','description'=>'string|required'];
+        return ['newstitle' => 'string|required', 'newsdate' => 'date|required', 'description' => 'string|required'];
     }
 }
