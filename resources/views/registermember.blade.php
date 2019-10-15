@@ -1,8 +1,8 @@
-@extends('layouts.adminlayout')
-@section('title')
+@extends('layouts.userlayout')
+@section('hometitle')
     CRGBMD INDIA | Register
 @endsection
-@section('content2')
+@section('usercontent')
 <div class="container">
     <h3 class="mt-4" style="color: gray;padding-top: 1em;">Member Registration</h3>
 <div class="card">
@@ -96,7 +96,7 @@
               </div>
               </div>
               <div class="form-group">
-              <label for="company-add">Address</label>
+              <label for="company-add">Company Address</label>
               <textarea class="form-control" id="company-add" placeholder="Company Address" required="" name="company-add" ></textarea>
              
             </div>

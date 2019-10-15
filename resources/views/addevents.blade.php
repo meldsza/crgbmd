@@ -8,7 +8,7 @@
 
 <div class="card">
     <div class="card-body">
-        <form method="post"action="/addeventss">
+        <form method="post"action="/addeventss" enctype="multipart/form-data">
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -55,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label for="eventimage">Image</label>
-                <input type="file" class="form-control-file" name="eventimage"id="eventimage"value="{{ old('eventimage') }}">
+                <input type="file" name="eventimage" id="eventimage">
                 @error('eventimage')
                     <div class="alert alert-danger">{{ $message }}</div>
                  @enderror

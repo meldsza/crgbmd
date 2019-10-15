@@ -9,7 +9,7 @@
 
                 <div class="card">
                     <div class="card-body">
-                            <form method="post"action="/addteams">
+                            <form method="post"action="/addteams" enctype="multipart/form-data">
                                 @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -82,7 +82,7 @@
                                
                                     <div class="form-group">
                                         <label for="photo">Image</label>
-                                        <input type="file" class="form-control-file" id="photo" name="image">
+                                        <input type="file" class="form-control-file" id="photo" name="photo">
                                         @error('photo')
                                         <div class="alert alert-danger">
                                             {{$message}}

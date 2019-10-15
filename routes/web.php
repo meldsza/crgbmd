@@ -19,63 +19,74 @@ use App\team;
 //     return view('welcome');
 // });
 
-
-Route::get('/dashboard',function(){
+Route::get('/admin', function () {
+    return redirect('/dashboard');
+});
+Route::get('/dashboard', function () {
     $cnt = members::count();
     $cnt2 = team::count();
     $cnt3 = events::count();
-    return view('admindashboard')->with(['total'=>$cnt,'teamno'=>$cnt2,'eventno'=>$cnt3]);
+    return view('admindashboard')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3]);
 })->middleware('auth');
-Route::get('/addevents',function(){
+Route::get('/addevents', function () {
     return view('addevents');
-});
-Route::get('/adminnews',function(){
+})->middleware('auth');
+Route::get('/adminnews', function () {
     return view('addnews1');
-});
-Route::get('/member_registration',function(){
+})->middleware('auth');
+Route::get('/member_registration', function () {
     return view('registermember');
 });
-Route::get('/addteam',function(){
+Route::get('/addteam', function () {
     return view('addteam');
+})->middleware('auth');
+Route::get('/team', 'admincontroller@displayteam')->middleware('auth');
+Route::get('/members', 'admincontroller@displaymembers')->middleware('auth');
+Route::get('/managenews', 'admincontroller@displaynews')->middleware('auth');
+Route::get('/manageevents', 'admincontroller@displayevents')->middleware('auth');
+Route::post('/addnewss', 'admincontroller@news')->middleware('auth');
+Route::post('/addeventss', 'admincontroller@events')->middleware('auth');
+Route::post('/addmember', 'admincontroller@member');
+Route::post('/addteams', 'admincontroller@team')->middleware('auth');
+Route::get('delete/{id}', 'admincontroller@delete')->middleware('auth');
+Route::get('deletenews/{id}', 'admincontroller@deletenews')->middleware('auth');
+Route::get('deleteevents/{id}', 'admincontroller@deleteevents')->middleware('auth');
+
+
+
+Route::get('/', function () {
+    return redirect('/userhome');
 });
-Route::get('/team','admincontroller@displayteam');
-Route::get('/members','admincontroller@displaymembers');
-Route::get('/managenews','admincontroller@displaynews');
-Route::get('/manageevents','admincontroller@displayevents');
-Route::post('/addnewss','admincontroller@news');
-Route::post('/addeventss','admincontroller@events');
-Route::post('/addmember','admincontroller@member');
-Route::post('/addteams','admincontroller@team');
-Route::get('delete/{id}','admincontroller@delete');
-Route::get('deletenews/{id}','admincontroller@deletenews');
-Route::get('deleteevents/{id}','admincontroller@deleteevents');
 
-
-
-Route::get('/userhome',function(){
-    return view('uhome');
+Route::get('/userhome', function () {
+    $cnt = members::count();
+    $cnt2 = team::count();
+    $cnt3 = events::count();
+    return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3]);
 });
-Route::get('/userservices',function(){
+Route::get('/userservices', function () {
     return view('uservices');
 });
-Route::get('/userabout',function(){
-     return view('uabout');
+Route::get('/userabout', function () {
+    return view('uabout');
 });
-Route::get('/userpartners',function(){
+Route::get('/userpartners', function () {
     return view('upartners');
 });
-Route::get('/userevents',function(){
+Route::get('/userevents', function () {
     return view('uevents');
 });
-Route::get('/userresources',function(){
+Route::get('/userresources', function () {
     return view('uresources');
 });
 
-Route::get('/userrgd',function(){
+Route::get('/userrgd', function () {
     return view('urgd');
 });
 
 
-Auth::routes();
+Auth::routes(['verify' => false, 'register' => false]);
 
+Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('/register', 'Auth\RegisterController@register')->name('register');
 Route::get('/home', 'HomeController@index')->name('home');

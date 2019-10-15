@@ -34,13 +34,13 @@
       <td>{{$value->description}}</td>
       <td>{{$value->eventvenue}}</td>
       <td>{{$value->eventdate}}</td>
+      <td><img src="/storage/{{$value->eventimage}}"></td>
       <td><a class="text-white" href="/deleteevents/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
         <button class="btn btn-raised btn-danger">Delete</button></a></td>
     </tr>
     @endforeach
   </tbody>
 </table>
-
                     </div>
                     </div>
                     

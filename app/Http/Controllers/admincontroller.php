@@ -12,6 +12,7 @@ use App\events;
 use App\members;
 use App\team;
 
+
 class admincontroller extends Controller
 {
     public function news(addnews $req)
@@ -23,15 +24,17 @@ class admincontroller extends Controller
 
     public function events(AddEvent $req)
     {
+        $data = $req->validated();
+        $data['eventimage'] = substr($req->file('eventimage')->store('public'), 7);
+        $rep = events::create($data);
 
-        $rep = events::create($req->validated());
         return redirect('/dashboard');
     }
 
     public function member(addmember $req)
     {
-
         $rep = members::create($req->validated());
+
         return redirect('/userhome');
     }
 
@@ -43,15 +46,16 @@ class admincontroller extends Controller
 
     public function team(addteam $req)
     {
-
-        $rep = team::create($req->validated());
+        $data = $req->validated();
+        $data['photo'] = substr($req->file('photo')->store('public'), 7);
+        $rep = team::create($data);
         return redirect('/dashboard');
     }
 
     public function displayteam()
     {
-        $res = team::all();
-        return view('team', compact('res'));
+        $request = team::all();
+        return view('team', compact('request'));
     }
 
     public function displaynews()
@@ -66,7 +70,7 @@ class admincontroller extends Controller
         return view('manageevents', compact('res'));
     }
 
-    public function delete($id)
+    public function delete($id, Request $request)
     {
         $x = team::findOrFail($id);
         // if ($x->image!=null) {
@@ -74,20 +78,13 @@ class admincontroller extends Controller
         // }
         $delete = team::where('id', '=', $id)->delete();
         if ($delete == true) {
-            echo "
-                <script>
-                alert('Deleted successfully');
-                window.location='/dashboard';
-                </script>
-                ";
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Task was successful!');
         } else {
-            echo "
-                <script>
-                alert('Error');
-                window.location='/dashboard';
-                </script>
-                ";
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'Task was unsuccessful!');
         }
+        return view('team');
     }
     public function deletenews($id)
     {

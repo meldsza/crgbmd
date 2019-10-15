@@ -24,7 +24,7 @@ class AddEvent extends FormRequest
     public function rules()
     {
         return [
-            'eventname'=>'string|required','eventdate'=>'date|required','description'=>'string|required','eventtype'=>'string|required|in:Technical,Non-Technical','eventvenue'=>'string|required','eventimage'=>'nullable|max:10000'    
+            'eventname' => 'string|required', 'eventdate' => 'date|required', 'description' => 'string|required', 'eventtype' => 'string|required|in:Technical,Non-Technical', 'eventvenue' => 'string|required', 'eventimage' => 'nullable|file|max:10000'
         ];
     }
 }
