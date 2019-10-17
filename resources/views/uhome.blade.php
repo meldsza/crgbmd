@@ -13,7 +13,7 @@
                    <h2 style="color:teal">Mission</h2>
                    <div class="card-body">
                    <p style="color:gray">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    To create a network and to provide a platform conducive for collaborations at multiple levels involving clinicians and basic scientists for a systematic study on select rare genetic and bone marrow disorders through the use of genomic technologies.
                    </p>
                    </div>
                </div>
@@ -23,7 +23,7 @@
                 <h2 style="color:teal">Vision</h2>
                 <div class="card-body">
                 <p style="color:gray">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                To improve our understanding of a group of rare genetic and bone marrow disorders through genomic research leading to improved clinical diagnosis and therapies for the patients.
                 </p>
                 </div>
             </div>
