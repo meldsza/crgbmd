@@ -111,7 +111,7 @@
                     <div class="text-center">
                      <i class="fa fa-graduation-cap" aria-hidden="true" style="font-size:50px;color:gold"></i>
                      <h1 class="text-white">{{$total}}</h1>
-                     <h3  style="color:white">Loreum ipsum</h3>
+                     <h3  style="color:white">Partners</h3>
             </div>
         </div>
         </div>
