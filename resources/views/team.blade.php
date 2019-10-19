@@ -32,11 +32,10 @@
       <th scope="col">Committe</th>
       <th scope="col">Designation</th>
       <th scope="col">Position</th>
-      <th scope="col">Image</th>
     </tr>
   </thead>
   <tbody>
-  @foreach($request as $value)
+  @foreach($res as $value)
     <tr>
       
       <td>{{$loop->iteration}}</td>
@@ -46,13 +45,8 @@
       <td>{{$value->committe}}</td>
       <td>{{$value->designation}}</td>
       <td>{{$value->position}}</td>
-      @if(!is_null($value->image))
-                       <td><img src="/storage/{{$value->photo}}"></td>
-                        @else
-                        <td> </td>
-                        @endif
 
-                        <td><a class="text-white" href="/delete/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
+      <td><a class="text-white" href="/delete/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
                           <button class="btn btn-raised btn-danger">Delete</button></a></td>
     </tr>
     @endforeach

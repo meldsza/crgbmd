@@ -54,8 +54,8 @@ class admincontroller extends Controller
 
     public function displayteam()
     {
-        $request = team::all();
-        return view('team', compact('request'));
+        $res = team::all();
+        return view('team', compact('res'));
     }
 
     public function displaynews()

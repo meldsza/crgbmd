@@ -58,12 +58,7 @@ Route::get('/', function () {
     return redirect('/userhome');
 });
 
-Route::get('/userhome', function () {
-    $cnt = members::count();
-    $cnt2 = team::count();
-    $cnt3 = events::count();
-    return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3]);
-});
+Route::get('/userhome', 'UserController@home');
 Route::get('/userservices', function () {
     return view('uservices');
 });
