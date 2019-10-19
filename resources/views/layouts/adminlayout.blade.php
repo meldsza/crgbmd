@@ -32,15 +32,20 @@
                         class="fa fa-calendar text-white" aria-hidden="true"></i> Add Events</a>
                 <a href="/adminnews" class="list-group-item list-group-item-action text-white"><i
                         class="fa fa-newspaper-o text-white" aria-hidden="true"></i>Add News</a>
+                <a href="/addgallery" class="list-group-item list-group-item-action text-white"><i
+                        class="fa fa-calendar text-white" aria-hidden="true"></i> Add Gallery Image</a>
+                <a href="/addteam" class="list-group-item list-group-item-action text-white"><i
+                        class="fa fa-user-o text-white" aria-hidden="true"></i>Add Team Member</a>
+
                 <a class="list-group-item list-group-item-action dropdown-toggle text-white" href="#" role="button"
                     id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-users text-white" aria-hidden="true"></i>Manage
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="/addteam">Add Committee Member</a>
-                    <a class="dropdown-item" href="/team">Committee Members</a>
+                    <a class="dropdown-item" href="/team">Manage Team Members</a>
                     <a class="dropdown-item" href="/managenews">Manage News</a>
                     <a class="dropdown-item" href="/manageevents">Manage Events</a>
+                    <a class="dropdown-item" href="/displaygallery">Manage Gallery</a>
                 </div>
             </div>
         </div>

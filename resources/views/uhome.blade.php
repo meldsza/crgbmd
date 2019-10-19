@@ -13,7 +13,7 @@
                    <h2 style="color:teal">Mission</h2>
                    <div class="card-body">
                    <p style="color:gray">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                   {Mission comming soon}
                    </p>
                    </div>
                </div>
@@ -23,7 +23,7 @@
                 <h2 style="color:teal">Vision</h2>
                 <div class="card-body">
                 <p style="color:gray">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                {Vision comming soon}
                 </p>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                         </div>
                        @endforeach
                     </div><br>
-                    <button type="button" class="btn btn-raised btn-warning text-center">Know More</button>
+                    <button type="button" class="btn btn-raised btn-warning "><a href="userevents" class="text-center">Know More</a></button>
                 </div>
             </div>
         </div>
@@ -98,156 +98,26 @@
         </div>
         </div>
     </div>
-
-
-    <section id="gallery">
-        <h3 class="text-center" style="padding-bottom:2em">Gallery</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                     <div class="card" style="width: 18rem;">
-                     <img class="card-img-top" src="{{asset('/images/team.jpg')}}" alt="Card image cap" data-action="zoom">
-                    </div>
-                </div>
-                <div class="col-sm">
-                     <div class="card" style="width: 18rem;">
-                         <img class="card-img-top" src="{{asset('/images/team.jpg')}}" alt="Card image cap">
-                   </div>
-                </div>
-                <div class="col-sm">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{asset('/images/team.jpg')}}" alt="Card image cap">
-                   </div>
-               </div>
-            </div>
-            <div class="row">
-                    <div class="col-sm">
-                         <div class="card" style="width: 18rem;">
-                         <img class="card-img-top" src="{{asset('/images/team.jpg')}}" alt="Card image cap">
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                         <div class="card" style="width: 18rem;">
-                             <img class="card-img-top" src="{{asset('/images/team.jpg')}}" alt="Card image cap">
-                       </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{{asset('/images/team.jpg')}}" alt="Card image cap">
-                       </div>
-                   </div>
-                </div>
-        </div>
-    </section>
-
     <section id="gallery">
         <h3 class="text-center" style="padding-bottom:2em">Gallery</h3>
         <div class="container">
           
 <div class="row">
+  @foreach($gallery as $value)
     <div class="col-md">
    
     
       <div class="ih-item circle effect2 left_to_right"><a href="#">
-      <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
+      <div class="img"><img src="{{asset('storage/'.$value->galleryimage)}}" alt="img"></div>
           <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
+          <h3>{{$value->imagetitle}}</h3>
           </div></a></div>
      
    
     </div>
-    <div class="col-md">
-   
-   
-      <div class="ih-item circle colored effect2 left_to_right"><a href="#">
-          <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-    
-    </div>
- 
-    <div class="col-md">
-   
-    
-      <div class="ih-item circle effect2 right_to_left"><a href="#">
-          <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-   
-   
-    </div>
-    <div class="col-md">
-      <div class="ih-item circle colored effect2 right_to_left"><a href="#">
-          <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md">
-   
-      <!-- normal -->
-      <div class="ih-item circle effect2 left_to_right"><a href="#">
-      <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-      <!-- end normal -->
-   
-    </div>
-    <div class="col-md">
-   
-      <!-- colored -->
-      <div class="ih-item circle colored effect2 left_to_right"><a href="#">
-          <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-      <!-- end colored -->
-   
-    </div>
- 
-  <!-- end Left to right-->
-   
-   
-  <!-- Right to left-->
-  
-    <div class="col-md">
-   
-      <!-- normal -->
-      <div class="ih-item circle effect2 right_to_left"><a href="#">
-          <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-      <!-- end normal -->
-   
-    </div>
-    <div class="col-md">
-   
-      <!-- colored -->
-      <div class="ih-item circle colored effect2 right_to_left"><a href="#">
-          <div class="img"><img src="{{asset('images/services.jpg')}}" alt="img"></div>
-          <div class="info">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div></a></div>
-      <!-- end colored -->
-   
-    </div>
-  </div>
-     </div>
+    @endforeach
+</div>
+</div> 
     </section>
     <!--footer-->
 @endsection

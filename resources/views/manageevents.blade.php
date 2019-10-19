@@ -9,7 +9,12 @@
 
                 <div class="card">
                     <div class="card-body">
-                   
+                        @if(Session::has('message'))
+                        <div class="alert alert-{{ Session::get('status') }} status-box">
+                            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            {{ Session::get('message') }}
+                        </div>
+                    @endif 
                    
                    
 
@@ -22,6 +27,7 @@
       <th scope="col">Description</th>
       <th scope="col">Event Venue</th>
       <th scope="col">Event Date</th>
+      <th scope="col">Event Image</th>
     </tr>
   </thead>
   <tbody>
@@ -34,7 +40,7 @@
       <td>{{$value->description}}</td>
       <td>{{$value->eventvenue}}</td>
       <td>{{$value->eventdate}}</td>
-      <td><img src="/storage/{{$value->eventimage}}"></td>
+      <td><img src="/storage/{{$value->eventimage}}"style="max-height:300px;max-width:100px"></td>
       <td><a class="text-white" href="/deleteevents/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
         <button class="btn btn-raised btn-danger">Delete</button></a></td>
     </tr>

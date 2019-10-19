@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests\AddEvent;
 use App\Http\Requests\addnews;
 use App\Http\Requests\addmember;
+use App\Http\Requests\AddGallery;
 use App\Http\Requests\addteam;
 use App\news;
 use App\events;
 use App\members;
 use App\team;
+use App\gallery;
 
 
 class admincontroller extends Controller
@@ -51,11 +53,26 @@ class admincontroller extends Controller
         $rep = team::create($data);
         return redirect('/dashboard');
     }
-
+    public function addgallery()
+    {
+        return view('adminAddGallery');
+    }
+    public function postaddgallery(AddGallery $req)
+    {
+        $data = $req->validated();
+        $data['galleryimage'] = substr($req->file('galleryimage')->store('public'), 7);
+        $rep = gallery::create($data);
+        return redirect('/dashboard');
+    }
     public function displayteam()
     {
         $res = team::all();
         return view('team', compact('res'));
+    }
+    public function displaygallery()
+    {
+        $res = gallery::all();
+        return view('managegallery', compact('res'));
     }
 
     public function displaynews()
@@ -86,7 +103,7 @@ class admincontroller extends Controller
         }
         return view('team');
     }
-    public function deletenews($id)
+    public function deletenews($id, Request $request)
     {
         $x = news::findOrFail($id);
         // if ($x->image!=null) {
@@ -94,42 +111,38 @@ class admincontroller extends Controller
         // }
         $delete = news::where('id', '=', $id)->delete();
         if ($delete == true) {
-            echo "
-                <script>
-                alert('Deleted successfully');
-                window.location='/dashboard';
-                </script>
-                ";
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Task was successful!');
         } else {
-            echo "
-                <script>
-                alert('Error');
-                window.location='/dashboard';
-                </script>
-                ";
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'Task was unsuccessful!');
         }
+        return view('managenews');
     }
-    public function deleteevents($id)
+    public function deleteevents($id, Request $request)
     {
         $x = events::findOrFail($id);
-        // if ($x->image!=null) {
-        //     unlink(public_path().'/uploads/images/'.$x->image);
-        // }
         $delete = events::where('id', '=', $id)->delete();
         if ($delete == true) {
-            echo "
-                <script>
-                alert('Deleted successfully');
-                window.location='/dashboard';
-                </script>
-                ";
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Task was successful!');
         } else {
-            echo "
-                <script>
-                alert('Error');
-                window.location='/dashboard';
-                </script>
-                ";
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'Task was unsuccessful!');
         }
+        return view('manageevents');
+    }
+    public function deletegalleryimage($id, Request $request)
+    {
+        $x = gallery::findOrFail($id);
+        $delete = events::where('id', '=', $id)->delete();
+        if ($delete == true) {
+            $request->session()->flash('status', 'success');
+            $request->session()->flash('message', 'Task was successful!');
+        } else {
+            $request->session()->flash('status', 'danger');
+            $request->session()->flash('message', 'Task was unsuccessful!');
+        }
+        return view('managegallery');
     }
 }

@@ -2,6 +2,7 @@
 
 use App\news;
 use App\events;
+use App\Http\Controllers\admincontroller;
 use App\members;
 use App\team;
 /*
@@ -49,6 +50,7 @@ Route::post('/addeventss', 'admincontroller@events')->middleware('auth');
 Route::post('/addmember', 'admincontroller@member');
 Route::post('/addteams', 'admincontroller@team')->middleware('auth');
 Route::get('delete/{id}', 'admincontroller@delete')->middleware('auth');
+Route::get('/deletegalleryimage/{id}', 'admincontroller@deletegalleryimage')->middleware('auth');
 Route::get('deletenews/{id}', 'admincontroller@deletenews')->middleware('auth');
 Route::get('deleteevents/{id}', 'admincontroller@deleteevents')->middleware('auth');
 
@@ -57,11 +59,14 @@ Route::get('deleteevents/{id}', 'admincontroller@deleteevents')->middleware('aut
 Route::get('/', function () {
     return redirect('/userhome');
 });
-
+Route::get('/addgallery', 'admincontroller@addgallery');
+Route::post('/addgallerys', 'admincontroller@postaddgallery');
 Route::get('/userhome', 'UserController@home');
 Route::get('/userservices', function () {
     return view('uservices');
 });
+Route::get('/displaygallery', 'admincontroller@displaygallery');
+Route::get('/usergallery', 'UserController@gallery');
 Route::get('/userabout', function () {
     return view('uabout');
 });
@@ -74,6 +79,7 @@ Route::get('/userevents', function () {
 Route::get('/userresources', function () {
     return view('uresources');
 });
+Route::get('/contact', 'UserController@contact');
 
 Route::get('/userrgd', function () {
     return view('urgd');
@@ -81,7 +87,6 @@ Route::get('/userrgd', function () {
 
 
 Auth::routes(['verify' => false, 'register' => false]);
-
 Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@register')->name('register');
 Route::get('/home', 'HomeController@index')->name('home');

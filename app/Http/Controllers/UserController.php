@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use App\members;
 use App\team;
 use App\events;
+use App\gallery;
 
 class UserController extends Controller
 {
@@ -27,7 +28,21 @@ class UserController extends Controller
         $events = Cache::get('events', function () {
             return events::limit(3)->orderBy('created_at', 'desc')->get();
         });
+        $gallery = Cache::get('gallery', function () {
+            return gallery::limit(8)->orderBy('created_at', 'desc')->get();
+        });
         //\Log::debug($events);
-        return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3, 'events' => $events]);
+        return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3, 'events' => $events, 'gallery' => $gallery]);
+    }
+    public function gallery()
+    {
+        $gallery = Cache::get('gallery', function () {
+            return gallery::get();
+        });
+        return view('ugallery')->with(['gallery' => $gallery]);
+    }
+    public function contact()
+    {
+        return view('ucontact');
     }
 }

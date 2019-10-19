@@ -83,6 +83,9 @@
                     <a class="nav-link font-weight-bold" href="userservices">Our Services</a>
                 </li>
                 <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" href="usergallery">Gallery</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link font-weight-bold" href="userpartners">Partners</a>
                 </li>
                 <li class="nav-item active">
@@ -91,7 +94,9 @@
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" href="userevents">Events</a>
                 </li>
-
+                <li class="nav-item active">
+                        <a class="nav-link font-weight-bold" href="contact">contact Us</a>
+                </li>
             </ul>
             <a href="{{url('/member_registration')}}"><button type="button" class="btn btn-raised btn-danger text-center">Register Member</button></a>
         </div>
@@ -121,7 +126,7 @@
                 </div>
                 <div class="col-md-4">
                         <p class="text-white">
-                        <a href="" class="text-white"><h5>Contact Us</h5></a>
+                        <a href="contact" class="text-white"><h5>Contact Us</h5></a>
                         </p>
                         <p class="text-white">
                                 P.O Deralakatte, Mangalore - 575018
