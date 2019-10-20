@@ -2,18 +2,18 @@
 @section('hometitle')
   CRGBMD INDIA | Home
 @endsection
-@section('usercontent')    
+@section('usercontent')
     <div class="parallaximg"></div>
-    
+
     <section id="home">
-       
+
         <div class="container">
            <div class="row">
                <div class="col-md-6" data-aos="fade-right" style="animation-delay:3s">
                    <h2 style="color:teal">Mission</h2>
                    <div class="card-body">
                    <p style="color:gray">
-                        To create a network and to provide a platform conducive for collaborations at multiple levels involving clinicians and basic scientists for a systematic study on select rare genetic and bone marrow disorders through the use of genomic technologies.   
+                        To create a network and to provide a platform conducive for collaborations at multiple levels involving clinicians and basic scientists for a systematic study on select rare genetic and bone marrow disorders through the use of genomic technologies.
                    </p>
                    </div>
                </div>
@@ -23,7 +23,7 @@
                 <h2 style="color:teal">Vision</h2>
                 <div class="card-body">
                 <p style="color:gray">
-                        To improve our understanding of a group of rare genetic and bone marrow disorders through genomic research leading to improved clinical diagnosis and therapies for the patients. 
+                        To improve our understanding of a group of rare genetic and bone marrow disorders through genomic research leading to improved clinical diagnosis and therapies for the patients.
                 </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
         </div>
     </section>
             <h3 class="text-center myheader "style="color:teal">News</h3>
-            {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     @foreach($news as $value)
                     <div class="carousel-item active">
@@ -53,16 +53,9 @@
                 <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a> --}}
-                @foreach($news as $value)
-                <div class="card">
-                    <div class="card-body">
-                    <p>{{$value->newshead}}</p>
-                    </div>
-                </div>
-                @endforeach
+                </a>
             </div>
-            
+
     <div class="user_icons" style="background-image:url(/images/icons.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -127,35 +120,35 @@
                             </div>
                         </div>
                     </div>
-            
-            
+
+
                 </div>
 
     <section id="gallery">
         <h3 class="text-center" style="padding-bottom:2em;color:teal">Gallery</h3>
         <div class="container">
-          
+
 <div class="row">
   @foreach($gallery as $value)
     <div class="col-md">
-   
-    
+
+
       <div class="ih-item circle effect2 left_to_right"><a href="#">
             <div class="spinner"></div>
       <div class="img"><img src="{{asset('storage/'.$value->galleryimage)}}" alt="img"></div>
           <div class="info">
           <div class="info-back">
           <h3>{{$value->imagetitle}}</h3>
-          </div>     
+          </div>
           </div></a>
-        
+
         </div>
-     
-   
+
+
     </div>
     @endforeach
 </div>
-</div> 
+</div>
     </section>
     <!--footer-->
 @endsection

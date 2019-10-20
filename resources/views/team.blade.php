@@ -10,7 +10,7 @@
                         <button class="btn btn-raised" onclick="printData();" id="printButton" style="background-color: #4e73df;color: white;margin: 1em;"><i class="fa fa-print" aria-hidden="true"></i> Print</button>
                     </div>
 
-                    
+
                 <div class="card">
                     <div class="card-body">
                     @if(Session::has('message'))
@@ -18,9 +18,9 @@
                           <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                           {{ Session::get('message') }}
                       </div>
-                  @endif 
-                   
-                   
+                  @endif
+
+
 
 <table class="table">
   <thead>
@@ -37,7 +37,7 @@
   <tbody>
   @foreach($res as $value)
     <tr>
-      
+
       <td>{{$loop->iteration}}</td>
       <td>{{$value->name}}</td>
       <td>{{$value->affiliation}}</td>
@@ -46,8 +46,12 @@
       <td>{{$value->designation}}</td>
       <td>{{$value->position}}</td>
 
-      <td><a class="text-white" href="/delete/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
-                          <button class="btn btn-raised btn-danger">Delete</button></a></td>
+      <td>
+
+<form action="/delete/{{ $value->id }}" method="POST">
+@csrf
+        <button type="submit" class="btn btn-raised btn-danger">Delete</button></form>
+        </td>
     </tr>
     @endforeach
   </tbody>
@@ -55,9 +59,9 @@
 
                     </div>
                     </div>
-                    
+
                 </div>
-                
+
 @endsection
 
 
@@ -72,6 +76,3 @@
     };
 </script>
 @endsection
-
-
-

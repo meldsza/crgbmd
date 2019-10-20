@@ -2,7 +2,7 @@
 @section('hometitle')
   CRGBMD-ABOUT
 @endsection
-@section('usercontent')  
+@section('usercontent')
 
 <div class="parallax"></div>
 
@@ -50,7 +50,7 @@
                             <p>Nitte (Deemed to be University) has been established by Nitte Education Trust, which has in its fold 36 institutions spread on 3 campuses at Nitte, Mangalore and Bangalore.
                                A centre of excellence in education and community service in Karnataka State, Nitte Health Care institutions are duly recognized by the Government of India.
                                Nitte (Deemed to be University) was established in the year 2008 vide MHRD Notication No. F.9-13/2007-U.3(A) dated 4th June, 2008.
-                                The University has been accredited by NAAC with 'A' Grade with 3.11 CGPA in October 2013 vide order No. F.NAAC/DS/RK/65EC-71/2013 dated October 26, 2013 and placed under category 'A' by the Ministry of Human Resource Development, Govt. of India vide letter No.F.9-26/2009-U.3(A)(Vol.5) dated 19-10-2012. 
+                                The University has been accredited by NAAC with 'A' Grade with 3.11 CGPA in October 2013 vide order No. F.NAAC/DS/RK/65EC-71/2013 dated October 26, 2013 and placed under category 'A' by the Ministry of Human Resource Development, Govt. of India vide letter No.F.9-26/2009-U.3(A)(Vol.5) dated 19-10-2012.
                                 The NIRF has ranked Nitte (Deemed to be University) as 70th amongst  907 Universities of the country in 2019.
                                 Nitte (Deemed to be University) has been awarded “Diamond” rating by QS I-GAUGE Indian University Ratings.
                                 NitteDU is the first Institution in Karnataka to achieve this distinction. All the constituent institutions, namely, K. S. Hegde Medical Academy (KSHEMA), A. B. Shetty Memorial Institute of Dental Sciences (ABSMIDS), Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences (NGSMIPS), Nitte Usha Institute of Nursing Sciences (NUINS), Nitte Institute of Physiotherapy (NIPT), Nitte Institute of Architecture (NIA), Nitte University Centre for Science Education & Research (NUCSER) and Nitte Institute of Communication (NICO) are housed in independent buildings with the best of infrastructure and amenities and are located on a sprawling campus of over 50 acres at Deralakatte and Paneer, Mangalore.
@@ -72,8 +72,8 @@
                                         facilties in the centre for science education and research
                                         (NUCSER) and a stem cell and regenerative medicine centre involved in HSC
                                         research (NUCSEReM).</li>
-                                    <li>Faculty of International repute with years of expertise in the area of rare genetic disorders, particularly in acrofacial dystoses and bone marrow failure syndromes</li> 
-                        
+                                    <li>Faculty of International repute with years of expertise in the area of rare genetic disorders, particularly in acrofacial dystoses and bone marrow failure syndromes</li>
+
                                 </ul>
                         </div>
 
@@ -159,20 +159,16 @@
                     <div class="col-sm">
                         @foreach($mg as $mgvalue)
                         <div class="card">
-                            <img class="card-img-top rounded" src="{{asset('storage/'.$event->eventimage)}}" alt="Card image cap">
-                        </div>
-                        @endforeach
-                        <div>
-                        <h5 class="text-center">{{$mgvalue->name}}</h5>
+                            <img class="card-img-top rounded" src="{{asset('storage/'.$mgvalue->photo)}}" alt="Card image cap">
+                            <h5 class="text-center">{{$mgvalue->name}}</h5>
                             <p class="text-center">{{$mgvalue->position}}</p>
-                        </div>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModal1">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#team{{ $mgvalue->id}}">
                                 Know More
-                            </button>
-                        </div>
-                        {{-- <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+                                </button>
+                            </div>
+                            <div class="modal fade" id="#team{{ $mgvalue->id}}" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -197,8 +193,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
-                    </div>  
+                        </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
 
@@ -209,4 +207,5 @@
 
 
     </section>
+
 @endsection

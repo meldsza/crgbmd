@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\AddEvent;
-use App\Http\Requests\addnews;
-use App\Http\Requests\addmember;
-use App\Http\Requests\AddGallery;
-use App\Http\Requests\addteam;
-use App\news;
 use App\events;
-use App\members;
-use App\team;
 use App\gallery;
-
+use App\Http\Requests\AddEvent;
+use App\Http\Requests\AddGallery;
+use App\Http\Requests\addmember;
+use App\Http\Requests\addnews;
+use App\Http\Requests\addteam;
+use App\members;
+use App\news;
+use App\team;
+use Illuminate\Http\Request;
 
 class admincontroller extends Controller
 {
@@ -101,7 +100,7 @@ class admincontroller extends Controller
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'Task was unsuccessful!');
         }
-        return view('team');
+        return back();
     }
     public function deletenews($id, Request $request)
     {
@@ -117,7 +116,7 @@ class admincontroller extends Controller
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'Task was unsuccessful!');
         }
-        return view('managenews');
+        return back();
     }
     public function deleteevents($id, Request $request)
     {
@@ -130,7 +129,7 @@ class admincontroller extends Controller
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'Task was unsuccessful!');
         }
-        return view('manageevents');
+        return back();
     }
     public function deletegalleryimage($id, Request $request)
     {
@@ -143,6 +142,6 @@ class admincontroller extends Controller
             $request->session()->flash('status', 'danger');
             $request->session()->flash('message', 'Task was unsuccessful!');
         }
-        return view('managegallery');
+        return back();
     }
 }

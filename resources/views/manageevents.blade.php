@@ -14,9 +14,9 @@
                             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                             {{ Session::get('message') }}
                         </div>
-                    @endif 
-                   
-                   
+                    @endif
+
+
 
 <table class="table">
   <thead>
@@ -33,28 +33,24 @@
   <tbody>
   @foreach($res as $value)
     <tr>
-      
+
       <td>{{$loop->iteration}}</td>
       <td>{{$value->eventname}}</td>
       <td>{{$value->eventtype}}</td>
       <td>{{$value->description}}</td>
       <td>{{$value->eventvenue}}</td>
       <td>{{$value->eventdate}}</td>
-      <td><img src="/storage/{{$value->eventimage}}"style="max-height:300px;max-width:100px"></td>
-      <td><a class="text-white" href="/deleteevents/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
-        <button class="btn btn-raised btn-danger">Delete</button></a></td>
+      <td><img src="/storage/{{$value->eventimage}}" style="max-height:300px;max-width:100px"></td>
+      <td><form action="/deleteevents/{{ $value->id }}"  method="POST" >
+        @csrf
+        <button type="submit" class="btn btn-raised btn-danger">Delete</button></form></td>
     </tr>
     @endforeach
   </tbody>
 </table>
                     </div>
                     </div>
-                    
+
                 </div>
-                
+
 @endsection
-
-
-
-
-

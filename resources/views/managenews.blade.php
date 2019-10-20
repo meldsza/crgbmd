@@ -6,7 +6,7 @@
 
             <div class="container-fluid">
                 <h2 class="mt-4" style="color: gray">Manage News</h2><br>
-                    
+
                 <div class="card">
                     <div class="card-body">
                         @if(Session::has('message'))
@@ -14,10 +14,10 @@
                             <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                             {{ Session::get('message') }}
                         </div>
-                         @endif 
-                   
-                   
-                   
+                         @endif
+
+
+
 
 <table class="table">
   <thead>
@@ -31,13 +31,15 @@
   <tbody>
   @foreach($res as $value)
     <tr>
-      
+
       <td>{{$loop->iteration}}</td>
       <td>{{$value->newshead}}</td>
       <td>{{$value->description}}</td>
       <td>{{$value->newsdate}}</td>
-      <td><a class="text-white" href="/deletenews/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
-        <button class="btn btn-raised btn-danger">Delete</button></a></td>
+      <td>
+<form action="/deletenews/{{ $value->id }}"  method="POST">
+@csrf
+        <button type="submit" class="btn btn-raised btn-danger">Delete</button></form></td>
     </tr>
     @endforeach
   </tbody>
@@ -45,12 +47,7 @@
 
                     </div>
                     </div>
-                    
+
                 </div>
-                
+
 @endsection
-
-
-
-
-

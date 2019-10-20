@@ -1,8 +1,6 @@
 <?php
 
-use App\news;
 use App\events;
-use App\Http\Controllers\admincontroller;
 use App\members;
 use App\team;
 /*
@@ -14,7 +12,7 @@ use App\team;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -49,12 +47,10 @@ Route::post('/addnewss', 'admincontroller@news')->middleware('auth');
 Route::post('/addeventss', 'admincontroller@events')->middleware('auth');
 Route::post('/addmember', 'admincontroller@member');
 Route::post('/addteams', 'admincontroller@team')->middleware('auth');
-Route::get('delete/{id}', 'admincontroller@delete')->middleware('auth');
-Route::get('/deletegalleryimage/{id}', 'admincontroller@deletegalleryimage')->middleware('auth');
-Route::get('deletenews/{id}', 'admincontroller@deletenews')->middleware('auth');
-Route::get('deleteevents/{id}', 'admincontroller@deleteevents')->middleware('auth');
-
-
+Route::post('/delete/{id}', 'admincontroller@delete')->middleware('auth');
+Route::post('/deletegalleryimage/{id}', 'admincontroller@deletegalleryimage')->middleware('auth');
+Route::post('/deletenews/{id}', 'admincontroller@deletenews')->middleware('auth');
+Route::post('/deleteevents/{id}', 'admincontroller@deleteevents')->middleware('auth');
 
 Route::get('/', function () {
     return redirect('/userhome');
@@ -68,9 +64,9 @@ Route::get('/userservices', function () {
 Route::get('/displaygallery', 'admincontroller@displaygallery');
 Route::get('/usergallery', 'UserController@gallery');
 Route::get('/userabout', function () {
-    $sc = team::where('committe', '=', 'scientific');
-    $ad = team::where('committe', '=', 'advisory');
-    $mg = team::where('committe', '=', 'managing');
+    $sc = team::where('committe', 'scientific')->get();
+    $ad = team::where('committe', 'advisory')->get();
+    $mg = team::where('committe', 'managing')->get();
     return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
 });
 Route::get('/userpartners', function () {
@@ -87,7 +83,6 @@ Route::get('/contact', 'UserController@contact');
 Route::get('/userrgd', function () {
     return view('urgd');
 });
-
 
 Auth::routes(['verify' => false, 'register' => false]);
 Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');

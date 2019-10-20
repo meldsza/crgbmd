@@ -5,7 +5,7 @@ CRGBMD | MANAGE-GALLERY
 @section('content2')
 <div class="container-fluid">
     <h2 class="mt-4" style="color: gray">Manage Gallery</h2><br>
-        
+
     <div class="card">
         <div class="card-body">
             @if(Session::has('message'))
@@ -13,7 +13,7 @@ CRGBMD | MANAGE-GALLERY
                 <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 {{ Session::get('message') }}
             </div>
-            @endif 
+            @endif
 <table class="table">
 <thead>
 <tr>
@@ -31,8 +31,10 @@ CRGBMD | MANAGE-GALLERY
 <td>{{$value->imagetitle}}</td>
 <td>{{$value->description}}</td>
 <td><img src="/storage/{{$value->galleryimage}}"style="max-height:300px;max-width:100px"></td>
-<td><a class="text-white" href="/deletegalleryimage/{{ $value->id }}" onclick="return confirm('Are you sure you want to delete this item?');">
-<button class="btn btn-raised btn-danger">Delete</button></a></td>
+<td>
+<form action="/deletegalleryimage/{{ $value->id }}"  method="POST">
+@csrf
+        <button type="submit" class="btn btn-raised btn-danger">Delete</button></form></td>
 </tr>
 @endforeach
 </tbody>
@@ -40,8 +42,7 @@ CRGBMD | MANAGE-GALLERY
 
         </div>
         </div>
-        
-    </div>
-    
-@endsection
 
+    </div>
+
+@endsection
