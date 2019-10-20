@@ -24,20 +24,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="row">
-                <div class="col-md">
+               <!-- <div class="col-md">
                     <p class="text-white"><i class="fa fa-phone" area-hidden="true"></i> +91 1234567890</p>
-                </div>
+                </div>-->
                 <div class="col-md">
-                    <p class="text-white"><i class="fa fa-phone" area-hidden="true"></i> +91 9876543210</p>
+                    <p class="text-white"><i class="fa fa-phone" area-hidden="true"></i> +91 7022129624</p>
                 </div>
                 <div style="margin:10px"></div>
             </div>
             <div class="row">
                 <div class="col-md">
-                    <p class="text-white"><i class="fa fa-envelope" area-hidden="true"></i> help@abc.com</p>
+                    <p class="text-white"><i class="fa fa-envelope" area-hidden="true"></i>anirban@nitte.edu.in</p>
                 </div>
                 <div class="col-md">
-                    <p class="text-white"><i class="fa fa-envelope" area-hidden="true"></i> help@abc.com</p>
+                    <p class="text-white"><i class="fa fa-envelope" area-hidden="true"></i>arati1239@gmail.com</p>
                 </div>
             </div>
             <div class="row offset-4">
