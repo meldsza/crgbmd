@@ -21,7 +21,7 @@
                 
                 <div class="form-group col-md-6">
                     <label for="description">Description</label>
-                    <textarea class="form-control" id="inputEmail4"name="description"required placeholder="Description" value="{{ old('description') }}"></textarea>
+                    <textarea class="form-control" id="inputEmail4"name="description" placeholder="Description" value="{{ old('description') }}"></textarea>
                     @error('description')
                         <div class="alert alert-danger">{{ $message }}</div>
                     @enderror

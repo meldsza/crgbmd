@@ -9,6 +9,7 @@ use App\members;
 use App\team;
 use App\events;
 use App\gallery;
+use App\news;
 
 class UserController extends Controller
 {
@@ -31,8 +32,11 @@ class UserController extends Controller
         $gallery = Cache::get('gallery', function () {
             return gallery::limit(8)->orderBy('created_at', 'desc')->get();
         });
-        //\Log::debug($events);
-        return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3, 'events' => $events, 'gallery' => $gallery]);
+        $news = Cache::get('news', function () {
+            return news::limit(5)->orderBy('created_at', 'desc')->get();
+        });
+        //\Log::debug($news);
+        return view('uhome')->with(['total' => $cnt, 'teamno' => $cnt2, 'eventno' => $cnt3, 'events' => $events, 'gallery' => $gallery, 'news' => $news]);
     }
     public function gallery()
     {

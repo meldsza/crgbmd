@@ -68,7 +68,10 @@ Route::get('/userservices', function () {
 Route::get('/displaygallery', 'admincontroller@displaygallery');
 Route::get('/usergallery', 'UserController@gallery');
 Route::get('/userabout', function () {
-    return view('uabout');
+    $sc = team::where('committe', '=', 'scientific');
+    $ad = team::where('committe', '=', 'advisory');
+    $mg = team::where('committe', '=', 'managing');
+    return view('uabout')->with(['sc' => $sc, 'ad' => $ad, 'mg' => $mg]);
 });
 Route::get('/userpartners', function () {
     return view('upartners');

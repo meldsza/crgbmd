@@ -9,7 +9,7 @@
     <!--main-->
     <section>
         <div id="about">
-            <h2 class="text-center animated fadeInUp" style="color: rgb(175, 132, 15);animation-delay: 1s">About Us</h2>
+            <h2 class="text-center animated fadeInUp" style="color:teal;animation-delay: 1s">About Us</h2>
         </div>
         <div class="container">
             <div class="row">
@@ -17,23 +17,17 @@
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-goals"
                             role="tab" aria-controls="v-pills-profile" aria-selected="false"
-                            style="color:rgb(175, 132, 15)">Goals
+                            style="color:teal">Goals
                             and Objectives</a>
                         <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-about" role="tab"
-                            aria-controls="v-pills-home" aria-selected="true" style="color:rgb(175, 132, 15)">About
+                            aria-controls="v-pills-home" aria-selected="true" style="color:teal">About
                             Nitte-DU</a>
-                        <!-- <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-Team" role="tab"
-                            aria-controls="v-pills-messages" aria-selected="false"
-                            style="color:rgb(175, 132, 15)">Team</a>
-                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-committe"
-                            role="tab" aria-controls="v-pills-settings" aria-selected="false"
-                            style="color:rgb(175, 132, 15)">Committe</a> -->
                         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-collaborators"
                             role="tab" aria-controls="v-pills-settings" aria-selected="false"
-                            style="color:rgb(175, 132, 15)">Collaborators</a>
+                            style="color:teal">Collaborators</a>
                         <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-Funding"
                             role="tab" aria-controls="v-pills-settings" aria-selected="false"
-                            style="color:rgb(175, 132, 15)">Funding Sources</a>
+                            style="color:teal">Funding Sources</a>
                     </div>
                 </div>
 
@@ -43,16 +37,26 @@
                         <div class="tab-pane fade show active" id="v-pills-goals" role="tabpanel"
                             aria-labelledby="v-pills-profile-tab">
                             <h5>Our goals and objectives</h5><br>
-                            <ul class="goals" id="goals">
-                                <li>> Bring together the clinicians and the researchers under one platform</li>
-                                <li>> Provide a comprehensive information about the status of RGD and BMFS</li>
-                                <li>> Gain a better understanding of these syndromes</li>
-                                <li>> Improve Clinical therapies and outcomes for the patients.</li>
+                            <ul >
+                                <li>To facilitate the interaction of interested clinicians and scientists through a common portal for addressing clinical and scientific issues pertaining to rare genetic disorders and bone marrow failure syndromes </li>
+                                <li>To gain a basic understanding of, and to unravel the extent and the nature of select rare genetic disorders and bone marrow failure syndromes in India from a genetic, cultural, regional, clinical and most importantly, a patient’s vantage point</li>
+                                <li>To provide comprehensive information on the etiology and genetic basis of these group of diseases in India </li>
+                                <li>To establish a patient database that enable advanced research in each category of the selected diseases in India</li>
+                                <li>To support research initiative under the consortium through funding of research proposals aimed at advanced diagnostics and therapeutics </li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="v-pills-about" role="tabpanel"
                             aria-labelledby="v-pills-home-tab">
-                            <h5>Why NITTE as a center for the consortium ?</h5><br>
+                            <p>Nitte (Deemed to be University) has been established by Nitte Education Trust, which has in its fold 36 institutions spread on 3 campuses at Nitte, Mangalore and Bangalore.
+                               A centre of excellence in education and community service in Karnataka State, Nitte Health Care institutions are duly recognized by the Government of India.
+                               Nitte (Deemed to be University) was established in the year 2008 vide MHRD Notication No. F.9-13/2007-U.3(A) dated 4th June, 2008.
+                                The University has been accredited by NAAC with 'A' Grade with 3.11 CGPA in October 2013 vide order No. F.NAAC/DS/RK/65EC-71/2013 dated October 26, 2013 and placed under category 'A' by the Ministry of Human Resource Development, Govt. of India vide letter No.F.9-26/2009-U.3(A)(Vol.5) dated 19-10-2012. 
+                                The NIRF has ranked Nitte (Deemed to be University) as 70th amongst  907 Universities of the country in 2019.
+                                Nitte (Deemed to be University) has been awarded “Diamond” rating by QS I-GAUGE Indian University Ratings.
+                                NitteDU is the first Institution in Karnataka to achieve this distinction. All the constituent institutions, namely, K. S. Hegde Medical Academy (KSHEMA), A. B. Shetty Memorial Institute of Dental Sciences (ABSMIDS), Nitte Gulabi Shetty Memorial Institute of Pharmaceutical Sciences (NGSMIPS), Nitte Usha Institute of Nursing Sciences (NUINS), Nitte Institute of Physiotherapy (NIPT), Nitte Institute of Architecture (NIA), Nitte University Centre for Science Education & Research (NUCSER) and Nitte Institute of Communication (NICO) are housed in independent buildings with the best of infrastructure and amenities and are located on a sprawling campus of over 50 acres at Deralakatte and Paneer, Mangalore.
+                                 One of the unique features of this university is the concept of giving back to the society through the extensive network of 21 rural health centres and 3 rural hospitals spread across 5 districts of two states, where more than 2.5 million people are provided with free health care annually.  </p>
+                            <a href="http://nitte.edu.in/">FOR MORE INFORMATION CLICK HERE</a><br>
+                            <br><h5 style="color:teal">Why NITTE as a center for the consortium ?</h5><br>
                             <p>
                                 <p>The following are sound reasons as to why the consortium should be set up at
                                     NITTE</p>
@@ -68,40 +72,32 @@
                                         facilties in the centre for science education and research
                                         (NUCSER) and a stem cell and regenerative medicine centre involved in HSC
                                         research (NUCSEReM).</li>
-                                    <li>The program directors have years of expertise in the area of BMF studies of
-                                        International repute (Drs Anirban Chakraborty and
-                                        Arati Khanna-Gupta). Dr Anirban has a collaborative project on rare genetic
-                                        disorders with Ghent University, Belgium.</li>
-                                    <li>Clincian partners Dr Rathika Shenoy and Dr Vikram Shetty have been working
-                                        on craniofacial dystoses for several years and have
-                                        a large database of patients.</li>
-                                    <li>The consortium will bring NITTE into international prominence as a Center of
-                                        Excellence for BMF studies in India.</li>
-                                    <li>Consortiums on rare genetic diseases are very few in India and there are no
-                                        such consortiums in this part of the country. Thus, it
-                                        is highly appropriate that Nitte becomes the premiere centre in South India
-                                        to have established this consortium.</li>
+                                    <li>Faculty of International repute with years of expertise in the area of rare genetic disorders, particularly in acrofacial dystoses and bone marrow failure syndromes</li> 
+                        
                                 </ul>
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-collaborators" role="tabpanel"
                             aria-labelledby="v-pills-settings-tab">
                             <h5>Potential collaborators and partners</h5><br>
-                            <p style="color:blue">Clinicians and Basic Scientists at NITTE DU</p>
+                            <p style="color:teal">Clinicians and Basic Scientists at NITTE DU</p>
                             <p>
                                 <ul>
-                                    <li>Dr Rathika Shenoy, Professor, Dept. of Pediatrics, KSHEMA</li>
-                                    <li>Dr Vijith Shetty, Assistant Professor, Dept. of Medical Oncology, KSHEMA</li>
-                                    <li>Dr Sunil Kumar Y, Additional Professor, Dept. of Pathology, KSHEMA</li>
-                                    <li>Dr Mohan Kumar, Associate Professor, NUCSEReM</li>
+                                    <li><b>Dr Rathika Shenoy</b>, Professor, Dept. of Pediatrics, KSHEMA</li>
+                                    <li><b>Dr Vijith Shetty</b>, Assistant Professor, Dept. of Medical Oncology, KSHEMA</li>
+                                    <li><b>Dr Sunil Kumar Y</b>, Additional Professor, Dept. of Pathology, KSHEMA</li>
+                                    <li><b>Dr Mohan Kumar</b>, Associate Professor, NUCSEReM</li>
                                 </ul>
                             </p>
-                            <p style="color: blue">Other Collaborators</p>
+                            <p style="color:teal">Other Collaborators</p>
                             <p>
                                 <ul>
-                                    <li>Pediatricians, Hematologists, Pathologists of Medical Colleges in and around
-                                        Mangalore</li>
-                                    <li>Interested Clinicians and Scientists from other parts of the country</li>
+                                      <li> <b>Dr Sachin Jadhav</b>, Group Head Hematology and BMT, HCG Group of Hospitals, India</li>
+                                        <li><b>Dr Sujata Mohanty</b>, Professor, Stem Cell Facility, AIIMS, New Delhi</li>
+                                        <li><b>Dr Sheela Nampoothiri</b>, Professor, Dept. of Pediatrics, Amrita School of Medicine, Kochi</li>
+                                        <li><b> Dr Lakshmi B R</b>, Founder, MDCRC, Coimbatore, India</li>
+                                        <li><b>Dr Ph Madhubala Devi</b>, Professor & HoD, Department of Pediatrics and Pathology, Regional Institute of Medical Sciences, Manipur, India</li>
+                                        <li><b>Dr Harsha Prasad L</b>, Pediatric Hematologist and Oncologist, KMC, Mangalore.</li>
                                 </ul>
                             </p>
                         </div>
@@ -161,12 +157,14 @@
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="row">
                     <div class="col-sm">
+                        @foreach($mg as $mgvalue)
                         <div class="card">
-                            <img class="card-img-top rounded" src="images/image13.jpg" alt="Card image cap">
+                            <img class="card-img-top rounded" src="{{asset('storage/'.$event->eventimage)}}" alt="Card image cap">
                         </div>
+                        @endforeach
                         <div>
-                            <h5 class="text-center">Prof. Dr. M. S. Moodithaya</h5>
-                            <p class="text-center">Chairman</p>
+                        <h5 class="text-center">{{$mgvalue->name}}</h5>
+                            <p class="text-center">{{$mgvalue->position}}</p>
                         </div>
                         <div class="text-center">
                             <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -174,7 +172,7 @@
                                 Know More
                             </button>
                         </div>
-                        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+                        {{-- <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
@@ -199,500 +197,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="img-thumbnail rounded" src="images/image15.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Prof. Dr. Alka Kulkarni</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal2">
-                                    Know More
-                                </button>
-                            </div>
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Prof. Dr. Alka Kulkarni
-                                            </h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Name and Affiliation : Prof. Dr. Alka Kulkarni
-                                                Nitte (Deemed to be
-                                                University)
-                                                Email: </p>
-                                            <p>Email : reg@nitte.edu.in</p>
-                                            <p>Designation : Registrar</p>
-                                            <p>Position : Member</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="img-thumbnail rounded" src="images/image14.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Mrs Vinutha J Shetty</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal3">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Mrs Vinutha J Shetty
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Mrs Vinutha J Shetty
-                                            Nitte (Deemed to be
-                                            University)
-                                            Email: </p>
-                                        <p>Email : vinuthajayaram@nitte.edu.in</p>
-                                        <p>Designation : Deputy
-                                            Director
-                                            (Finance)</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/t1.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Prof. Dr. Rathika Shenoy
-                                KSHEMA</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal4">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Prof. Dr. Rathika Shenoy
-                                            KSHEMA
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Prof. Dr. Rathika Shenoy
-                                            KSHEMA
-                                            Nitte (Deemed to be
-                                            University)
-                                        </p>
-                                        <p>Email : rathika.shenoy@nitte.edu.in</p>
-                                        <p>Designation : Professor of
-                                            Pediatrics,
-                                            KSHEMA</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/image16.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Prof. Dr. Vikram Shetty
-                                KSHEMA</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal4">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Prof. Dr. Vikram Shetty
-                                            KSHEMA
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Prof. Dr. Vikram Shetty
-                                            KSHEMA
-                                            Nitte (Deemed to be
-                                            University)
-                                        </p>
-                                        <p>Email : drvikramshetty@nitte.edu.in</p>
-                                        <p>Designation : Director and
-                                            Head, Nitte
-                                            Meenakshi
-                                            Institute of
-                                            Craniofacial
-                                            Surgery</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/t1.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Dr. Mohan Kumar</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal5">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Dr. Mohan Kumar
-
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Dr. Mohan Kumar
-                                            Nitte (Deemed to be
-                                            University)
-                                        </p>
-                                        <p>Email : mohanakumar@nitte.edu.in</p>
-                                        <p>Designation : Associate
-                                            Professor</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/t1.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Dr. Sunil Kumar Y
-                                KSHEMA</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal6">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Dr. Sunil Kumar Y
-                                            KSHEMA
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Dr. Sunil Kumar Y
-                                            KSHEMA
-                                            Nitte (Deemed to be
-                                            University)
-                                        </p>
-                                        <p>Email : drsunilkumary@nitte.edu.in</p>
-                                        <p>Designation : Additional
-                                            Professor,
-                                            Dept of
-                                            Pathology</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/t1.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Dr. Vijith Shetty</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal7">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Dr. Vijith Shetty
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Dr. Vijith Shetty
-                                            Nitte (Deemed to be
-                                            University)
-                                        </p>
-                                        <p>Email : drvijithshetty@gmail.com</p>
-                                        <p>Designation : Assistant
-                                            Professor,
-                                            Dept of
-                                            Oncology,
-                                            KSHEMA</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/image7.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Dr. Arati Khanna Gupta</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal8">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Dr. Arati Khanna Gupta
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Dr. Arati Khanna Gupta
-                                            Private Consultant
-                                        </p>
-                                        <p>Email : arati1239@gmail.com</p>
-                                        <p>Designation : Ex-Assistant
-                                            Professor,
-                                            Harvard
-                                            Medical
-                                            School,
-                                            Boston</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-sm">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/image8.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Dr. Sachin Jadhav</h5>
-                            <p class="text-center">Member</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal9">
-                                    Know More
-                                </button>
-                            </div>
-                        </div>
-                        <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Dr. Sachin Jadhav
-                                        </h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Name and Affiliation : Dr. Sachin Jadhav
-                                            Group Head
-                                            Hematology and BMT,
-                                            HCG Group of Hospitals
-                                        </p>
-                                        <p>Email : drsachinjadhav@hotmail.com</p>
-                                        <p>Designation : Specialist,
-                                            Hematology
-                                            and Bone
-                                            Marrow
-                                            Transplant</p>
-                                        <p>Position : Member</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="card">
-                            <img class="card-img-top rounded" src="images/image10.jpg" alt="Card image cap">
-                        </div>
-                        <div>
-                            <h5 class="text-center">Prof. Dr. Anirban
-                                Chakraborty</h5>
-                            <p class="text-center">Member
-                                Secretary</p>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModal">
-                                    Know More
-                                </button>
-                            </div>
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Prof. Dr. Anirban
-                                                Chakraborty</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Name and Affiliation : Prof. Dr. Anirban Chakraborty NUCSER, Nitte
-                                                (Deemed to be
-                                                University)</p>
-                                            <p>Email : anirban@nitte.edu.in</p>
-                                            <p>Designation : Deputy
-                                                Director,
-                                                NUCSER</p>
-                                            <p>Position : Member
-                                                Secretary</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                        </div> --}}
+                    </div>  
                 </div>
             </div>
 

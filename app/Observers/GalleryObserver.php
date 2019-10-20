@@ -16,7 +16,7 @@ class GalleryObserver
     public function created(gallery $gallery)
     {
         Cache::rememberForever('gallery', function () {
-            return events::limit(8)->orderBy('created_at', 'desc')->get();
+            return gallery::limit(8)->orderBy('created_at', 'desc')->get();
         });
     }
 
@@ -29,7 +29,7 @@ class GalleryObserver
     public function updated(gallery $gallery)
     {
         Cache::rememberForever('gallery', function () {
-            return events::limit(8)->orderBy('created_at', 'desc')->get();
+            return gallery::limit(8)->orderBy('created_at', 'desc')->get();
         });
     }
 
